@@ -1,0 +1,29 @@
+{
+  "name": "ElectronVueFlask",
+  "version": "1.0.0",
+  "description": "A minimal Electron + Python backend (Flask) + Vue.js",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "packFrontend": "./node_modules/.bin/electron-packager . --overwrite --ignore=\".*\\.py\" --ignore=\"\\.venv\" --ignore=\"\\build\"",
+    "packBackend": "pyinstaller myapp/api.py --distpath myapp/dist --onefile --icon=icon.png --noconfirm  --add-data 'myapp/client:.' --add-data 'myapp/app.cfg:.' --add-data 'myapp/test.db:.'"
+  },
+  "repository": "https://github.com/MaiaVinicius/electron_vue_flask",
+  "keywords": [
+    "Electron",
+    "Python",
+    "zerorpc",
+    "demo",
+    "Flask",
+    "Vue.js"
+  ],
+  "author": "MaiaVinicius",
+  "license": "MIT",
+  "dependencies": {
+    "zerorpc": "git+https://github.com/fyears/zerorpc-node.git"
+  },
+  "devDependencies": {
+    "electron": "^1.7.6",
+    "electron-packager": "^9.1.0"
+  }
+}
