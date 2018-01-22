@@ -1,0 +1,4 @@
+pyinstaller
+pypiwin32
+flask
+gunicorn
