@@ -2,3 +2,4 @@ pyinstaller
 pypiwin32
 flask
 gunicorn
+flask_sqlalchemy
